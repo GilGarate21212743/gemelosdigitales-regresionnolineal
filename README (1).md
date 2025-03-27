@@ -1,6 +1,6 @@
-[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=GilGarate21212743/sistema-presadepredador-lotkavolterra)
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=GilGarate21212743/gemelosdigitales-regresionnolineal)
 
-# Gemelos Digitales. Práctica 2: Sistema Presa-Depredador del modelo Lotka-Volterra [GilGarate-21212743]
+# Gemelos Digitales. Práctica 3: Algoritmos de Regresión No Lineal [GilGarate-21212743]
 
 ## Autor
 Gil Gárate Carlos Andrés 
@@ -8,15 +8,18 @@ Gil Gárate Carlos Andrés
 Ingeniería Biomédica, Departamento de Ingeniería Eléctrica y Electrónica, Tecnológico Nacional de México/IT Tijuana. Blvd. Alberto Limón Padilla s/n, Tijuana, C.P. 22454, B.C., México. Email: l21212743@tectijuana.edu.mx
 
 ## Resumen de la práctica
-En esta práctica se analiza el modelo matemático de Lotka-Volterra para sistemas presa-depredador, el cual describe la dinámica poblacional de dos especies en interacción. A través de la implementación en MATLAB, se exploran distintos métodos numéricos para resolver las ecuaciones diferenciales que rigen el comportamiento de las poblaciones, permitiendo analizar su estabilidad y evolución en el tiempo. El modelo de Lotka-Volterra se basa en un sistema de ecuaciones diferenciales ordinarias (EDOs) que describe cómo cambia la población de presas y depredadores en función de ciertos parámetros, como las tasas de crecimiento, la tasa de depredación y la eficiencia de conversión de recursos. La implementación de este modelo en MATLAB permite visualizar la evolución de ambas especies y comprender los factores que influyen en su equilibrio o extinción.
+Esta práctica tiene como objetivo construir y analizar un modelo mecanicista basado en ecuaciones diferenciales de primer orden para describir la dinámica entre dos variables biológicas. Se busca ajustar los parámetros del modelo mediante algoritmos de regresión no lineal y evaluar su capacidad predictiva con base en datos experimentales.
 
-Para la solución numérica del sistema, se emplean distintos métodos de integración. El método de Euler, una aproximación explícita de primer orden, proporciona una solución básica pero propensa a errores numéricos. Para mejorar la precisión, se utiliza el método de Heun, una variante de segundo orden que refina la estimación de la trayectoria de las poblaciones. Asimismo, se emplea el método de Runge-Kutta de cuarto orden, el cual ofrece una solución más precisa y estable, ampliamente utilizado en la simulación de sistemas dinámicos. A partir de las simulaciones realizadas, se analizan los ciclos poblacionales característicos del modelo, observando cómo la población de presas crece en ausencia de depredadores, mientras que la de depredadores disminuye sin una fuente de alimento. Se identifican puntos de equilibrio y se examina la estabilidad del sistema mediante distintas condiciones iniciales. Finalmente, se discute la aplicabilidad del modelo en escenarios ecológicos reales y sus limitaciones frente a factores no considerados, como la competencia inter-específica y la variabilidad ambiental.
+Para ello, se inicia con la carga de un conjunto de datos experimentales almacenados en un archivo CSV, donde se encuentran las mediciones de tiempo y las variables de interés. Posteriormente, se plantea un modelo matemático que considera un comportamiento sigmoidal y una capacidad de carga máxima para la variable dependiente. El modelo es ajustado utilizando varias leyes de crecimiento no lineales que reflejan distintos tipos de dinámicas biológicas. Se emplean algoritmos de regresión no lineal, como el basado en la ley de crecimiento logístico, que modela el crecimiento limitado de una población o sistema. Además, se utiliza la ley de crecimiento alométrico esférico, que es adecuada para sistemas con geometría esférica, y la ley de crecimiento alométrico fractal, que describe el crecimiento en sistemas con estructuras fractales. También se incorpora la ley de crecimiento de Gompertz, muy útil en el modelado del crecimiento de poblaciones y tumores, así como su versión simplificada para obtener un modelo más accesible.
+
+Cada uno de estos algoritmos se implementa para ajustar los parámetros del modelo y minimizar la diferencia entre los valores modelados y los datos experimentales. Finalmente, se evalúa el ajuste del modelo mediante métricas estadísticas y visualización gráfica, con el fin de validar su capacidad predictiva y su aplicabilidad en la descripción de los datos biológicos analizados.
 
 ## Objetivos específicos
-1. Desarrollar un código en MATLAB para la simulación del modelo Lotka-Volterra.
-2. Comparar la precisión y estabilidad de distintos métodos de integración numérica.
-3. Analizar la dinámica poblacional y los puntos de equilibrio del modelo.
-4. Discutir la aplicabilidad y limitaciones del modelo de Lotka-Volterra.
+1. Cargar y preprocesar los datos experimentales.
+2. Desarrollar un modelo matemático basado en ecuaciones diferenciales de primer orden.
+3. Ajustar los parámetros del modelo utilizando algoritmos de regresión no lineal.
+4. Evaluar la capacidad predictiva del modelo.
+5. Visualizar y validar el ajuste del modelo.
 
 ## Docente
 Dr. Paul A. Valle
@@ -25,6 +28,3 @@ Posgrado en Ciencias de la Ingeniería [PCI] y Departamento de Ingeniería Eléc
 
 ## Lecturas
 [1] Paul. A. Valle, Syllabus de Biomatemáticas para la asignatura de Gemelos Digitales, Tecnológico Nacional de México/IT Tijuana, Tijuana, B.C., México, 2025. Permalink: https://www.dropbox.com/s/6yf9afxzih9y458/Biomatematicas.pdf
-
-[2] Levin, S. A., Hallam, T. G., & Gross, L. J. (Eds.). Applied mathematical ecology (Vol. 18). Springer Science & Business Media. (2012).
-
